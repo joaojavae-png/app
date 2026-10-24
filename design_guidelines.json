@@ -1,0 +1,177 @@
+{
+  "theme": {
+    "mode": "light",
+    "primary_dark_teal": "#123C46",
+    "accent_teal": "#20B8A6",
+    "accent_teal_hover": "#179B8B",
+    "bg_base": "#F7F9FA",
+    "surface_white": "#FFFFFF",
+    "text_primary": "#202A30",
+    "text_secondary": "#697780",
+    "border_subtle": "#E2E8F0",
+    "sidebar_bg": "#123C46",
+    "sidebar_text": "#F1F5F9",
+    "sidebar_text_muted": "#94A3B8",
+    "sidebar_active_bg": "#1D4E5B"
+  },
+  "colors": {
+    "surfaces": [
+      {
+        "name": "page",
+        "kind": "solid",
+        "bg": "#F7F9FA",
+        "on_bg": "#202A30",
+        "on_bg_muted": "#697780",
+        "roles": {
+          "link": "#123C46",
+          "error": "#DC2626",
+          "success": "#16A34A",
+          "warning": "#D97706"
+        }
+      },
+      {
+        "name": "panel",
+        "kind": "solid",
+        "bg": "#FFFFFF",
+        "on_bg": "#202A30",
+        "on_bg_muted": "#697780",
+        "roles": {
+          "link": "#123C46",
+          "error": "#DC2626",
+          "success": "#16A34A",
+          "warning": "#D97706"
+        }
+      },
+      {
+        "name": "sidebar",
+        "kind": "solid",
+        "bg": "#123C46",
+        "on_bg": "#F1F5F9",
+        "on_bg_muted": "#94A3B8",
+        "roles": {
+          "active_indicator": "#20B8A6",
+          "accent_badge": "#20B8A6"
+        }
+      },
+      {
+        "name": "kanban_column",
+        "kind": "solid",
+        "bg": "#EEF2F6",
+        "on_bg": "#202A30",
+        "on_bg_muted": "#697780"
+      },
+      {
+        "name": "demo_badge",
+        "kind": "solid",
+        "bg": "#FEF3C7",
+        "on_bg": "#92400E",
+        "on_bg_muted": "#B45309"
+      },
+      {
+        "name": "phase_placeholder_badge",
+        "kind": "solid",
+        "bg": "#F1F5F9",
+        "on_bg": "#475569",
+        "on_bg_muted": "#64748B"
+      }
+    ],
+    "accent": "#20B8A6",
+    "on_accent": "#042F2E",
+    "primary": "#123C46",
+    "on_primary": "#FFFFFF"
+  },
+  "typography": {
+    "font_family_heading": "Plus Jakarta Sans, sans-serif",
+    "font_family_body": "DM Sans, sans-serif",
+    "font_family_mono": "IBM Plex Mono, monospace",
+    "scale_px": {
+      "display": 48,
+      "h1": 36,
+      "h2": 28,
+      "h3": 20,
+      "body": 15,
+      "caption": 13
+    }
+  },
+  "entry_surfaces": {
+    "/login": "split auth screen — dark petrol brand panel with Vatrexz OS positioning on left, clean white clinic login form on right",
+    "/signup": "split auth screen — clinic registration panel left, structured multi-step clinic setup form right",
+    "/": "operational executive dashboard with real-time Phase 1 metrics, funnel analysis, and instant navigation",
+    "/crm": "dual-view CRM cockpit — sticky period controls top, responsive horizontal Kanban board / high-density Table toggle below"
+  },
+  "layout_and_navigation": {
+    "app_shell": {
+      "sidebar_width": "260px (collapsed: 72px)",
+      "header_height": "64px",
+      "sidebar_modules_count": 18,
+      "phase_1_modules": [
+        "Dashboard geral (/)",
+        "CRM (/crm)",
+        "Leads (/leads)",
+        "Clientes (/clientes)",
+        "Serviços e procedimentos (/servicos)",
+        "Relatórios e desempenho (/relatorios)",
+        "Configurações (/configuracoes)"
+      ],
+      "unimplemented_modules_placeholder": "Renders honest 'Fase X — não implementado' banner with roadmap explanation, scope description and zero fake toggles."
+    }
+  },
+  "component_guidelines": {
+    "crm_kanban": {
+      "columns": [
+        {"id": "iniciou_conversa", "name": "Iniciou Conversa", "color": "#3B82F6"},
+        {"id": "conversando", "name": "Conversando", "color": "#06B6D4"},
+        {"id": "agendou", "name": "Agendou", "color": "#8B5CF6"},
+        {"id": "compareceu", "name": "Compareceu", "color": "#10B981"},
+        {"id": "cliente_recorrente", "name": "Cliente Recorrente", "color": "#20B8A6"},
+        {"id": "perdido", "name": "Perdido/Sem interesse", "color": "#EF4444"}
+      ],
+      "card_features": [
+        "Drag handle icon",
+        "Lead / Client name with high contrast",
+        "Service of interest tag (or 'Interesse não informado')",
+        "Monospace stage code with copy button",
+        "Time since last interaction with exact datetime tooltip",
+        "Click opens Sheet side panel with audit timeline, notes, loss reasons",
+        "'Mover para...' accessible dropdown menu for direct stage change"
+      ]
+    },
+    "indicator_registry": {
+      "kpi_card_structure": [
+        "Stable KPI ID (e.g. KPI-L01)",
+        "Mathematical formula",
+        "Numerator / Denominator definition",
+        "Data source & filters applied",
+        "Inclusion / Exclusion rules",
+        "Limitations and Phase 1 vs Phase N caveats"
+      ]
+    }
+  },
+  "data_testid_conventions": {
+    "mandatory_pattern": "kebab-case functional identifiers",
+    "examples": [
+      "login-email-input",
+      "login-submit-button",
+      "crm-period-filter-select",
+      "crm-view-toggle-kanban",
+      "crm-view-toggle-table",
+      "kanban-column-iniciou_conversa",
+      "kanban-card-{contact_id}",
+      "kanban-card-move-to-menu",
+      "contact-sheet-timeline",
+      "service-create-button",
+      "demo-reset-trigger-button",
+      "indicator-registry-card-{kpi_id}"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Language MUST be pt-BR (Portuguese Brazil) across all labels, tooltips, validation messages, and currency formats (R$ Brazilian Real).",
+    "Light theme is the primary aesthetic. Dark petrol (#123C46) is reserved for sidebar, top level brand accents, and active states.",
+    "Accent teal (#20B8A6) must be used with precision for positive triggers, primary CTAs, active badges, and conversion metric highlights.",
+    "Do NOT use generic gradients or decorative fluff. Prioritize operational density, clean 1px border (#E2E8F0), and crisp typography.",
+    "CRM Kanban must feature independent vertical scrolling per column and smooth horizontal board scrolling.",
+    "All seed demo records must display a clear, accessible DEMO tag.",
+    "Placeholders for non-Phase 1 modules must be explicitly marked 'Fase X — não implementado' with genuine explanation and no mock deceptive controls.",
+    "Attach data-testid to every button, filter, tab, menu item, card, and form field."
+  ]
+}
